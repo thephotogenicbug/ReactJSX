@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul{
+  margin:0px;
+  padding:15px;
+  background:black;
+}
+
+nav ul li{
+  display:inline;
+  padding:15px;
+}
+
+.pagelink{
+  color:white;
+  text-decoration: none;
+
+}
+
+.pagelink:hover{
+  color:yellow;
+}
+.pagelink:focus{
+  text-decoration: underline;
+  color:red;
+}

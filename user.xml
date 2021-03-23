@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<userlist>
+
+  <user>
+    <name>Ganesh</name>
+	<mobile>9008006228</mobile>
+	<city>Bangalore</city>
+	<age>20 Years</age>
+  </user>
+  
+   <user>
+    <name>Mahesh</name>
+	<mobile>9008006221</mobile>
+	<city>Pune</city>
+	<age>21 Years</age>
+  </user>
+
+
+ <user>
+    <name>Suresh</name>
+	<mobile>9008006222</mobile>
+	<city>Chennai</city>
+	<age>22 Years</age>
+  </user>
+  
+</userlist>

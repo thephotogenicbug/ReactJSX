@@ -1,0 +1,50 @@
+JSX(javascript & xml) = Javascript + html + xml Rules
+     component : in react js each .js file is called component
+	 Type of component in react js
+	 1. functional component (hooks)
+	 2. class component 
+	 
+	 JSX Element : All the tags (pre-defined, user defined) in reactjs are JSX Element
+	 
+	 1. if in a component only one jsx element is used then no need to follow jsx element.
+	 Example :
+	 
+	     <h1>Welcome ReactJs</h1>
+---------------------------------------------------------------------------------------------------	
+    2. if in a component more then one jsx element are used then keep inside parent jsx element 
+     Example: 
+	        <div>
+            <h1>About us </h1>
+             <p> aa aaa aaa aaa aaa aaa aaa aaa aa </p>
+			<div> aaa aaa aaa aaa aaa aaa aaa aaa </div>
+			<p> aa aaa aaa aaa aaa aaa aaa aaa  aa </p>
+			</div>
+-----------------------------------------------------------------------------------------------			
+    3. if in a component more then one jsx element are used then keep inside parent jsx element are used then we can keep parent tag as a user defined tag also
+     Example: 
+	        <hello>
+            <h1>About us </h1>
+             <p> aa aaa aaa aaa aaa aaa aaa aaa aa </p>
+			<div> aaa aaa aaa aaa aaa aaa aaa aaa </div>
+			<p> aa aaa aaa aaa aaa aaa aaa aaa  aa </p>
+			</hello>		
+
+------------------------------------------------------------------------------------------------
+     4. if in a component more then one jsx element are used then keep inside parent jsx element are used then we can keep parent tag as empty tag <></> also
+     Example: 
+	        <>
+            <h1>About us </h1>
+             <p> aa aaa aaa aaa aaa aaa aaa aaa aa </p>
+			<div> aaa aaa aaa aaa aaa aaa aaa aaa </div>
+			<p> aa aaa aaa aaa aaa aaa aaa aaa  aa </p>
+			</>			
+---------------------------------------------------------------------------------------------------			
+
+    5. if in a component more then one jsx element are used then keep inside parent jsx element are used then we can keep parent tag as array [] also
+     Example: 
+	        [
+            <h1>About us </h1>,
+             <p> aa aaa aaa aaa aaa aaa aaa aaa aa </p>,
+			<div> aaa aaa aaa aaa aaa aaa aaa aaa </div>,
+			<p> aa aaa aaa aaa aaa aaa aaa aaa  aa </p>
+			]
