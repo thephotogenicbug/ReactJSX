@@ -1,6 +1,6 @@
-npx create-react-app myproject1 to create new project
-npm install -g create-react-app to install enviroment
+npx create-react-app myproject1 to             create new project
+npm install -g create-react-app to             install enviroment
 npm install react-router-dom
+npm install mbdreact
+npm install bootstrap
 
-
-npm install --global expo-cli
