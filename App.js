@@ -8,6 +8,8 @@ import ContactUs from './contact';
 import UserLogin from './login';
 import Register from './signup';
 import Product from './product';
+import StateOne from './state1';
+import StateTwo from './state2';
 
 function App() {
   return(
@@ -20,6 +22,8 @@ function App() {
           <Route exact path="/login" component={UserLogin}/>
           <Route exact path="/signup" component={Register}/>
           <Route exact path="/product" component={Product}/>
+          <Route exact path="/state1" component={StateOne}/>
+          <Route exact path="/state2" component={StateTwo}/>
         </HashRouter>
   )
 }

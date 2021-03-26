@@ -13,6 +13,7 @@ class UserLogin extends Component{
 
      render(){
          //second contructor
+         //alert("two")
          return(
             <section>
                 <h1 align="center">Login</h1>

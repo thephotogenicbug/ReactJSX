@@ -13,6 +13,9 @@ const Header = ()=>{
                 <li><Link to="/login" className="pagelink">Login</Link></li>
                 <li><Link to="/signup" className="pagelink">Signup</Link></li>
                 <li><Link to="/product" className="pagelink">Products</Link></li>
+                <li><Link to="/state1" className="pagelink">State1</Link></li>
+                <li><Link to="/state2" className="pagelink">State2</Link></li>
+
             </ul>
         </nav>
     )
