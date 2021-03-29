@@ -39,3 +39,12 @@ nav ul li{
   box-shadow:1px 2px 5px blue;
 
 }
+#card1{
+  background-color: #837f7c;
+  border-radius: 18px;
+  box-shadow: 0px 2px 5px ;
+}
+#border{
+  border-radius: 18px;
+  box-shadow: 0px 2px 5px ;
+}
