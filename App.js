@@ -10,6 +10,10 @@ import Register from './signup';
 import Product from './product';
 import StateOne from './state1';
 import StateTwo from './state2';
+import StateThree from './state3';
+import StateFour from './state4';
+import StateFive from './state5';
+import StateSix from './state6';
 
 function App() {
   return(
@@ -24,6 +28,10 @@ function App() {
           <Route exact path="/product" component={Product}/>
           <Route exact path="/state1" component={StateOne}/>
           <Route exact path="/state2" component={StateTwo}/>
+          <Route exact path="/state3" component={StateThree}/>
+          <Route exact path="/state4" component={StateFour}/>
+          <Route exact path="/state5" component={StateFive}/>
+          <Route exact path="/state6" component={StateSix}/>
         </HashRouter>
   )
 }

@@ -15,9 +15,15 @@ const Header = ()=>{
                 <li><Link to="/product" className="pagelink">Products</Link></li>
                 <li><Link to="/state1" className="pagelink">State1</Link></li>
                 <li><Link to="/state2" className="pagelink">State2</Link></li>
+                <li><Link to="/state3" className="pagelink">State3</Link></li>
+                <li><Link to="/state4" className="pagelink">State4</Link></li>
+                <li><Link to="/state5" className="pagelink">State5</Link></li>
+                <li><Link to="/state6" className="pagelink">State6</Link></li>
 
             </ul>
+            
         </nav>
+        
     )
 }
 
