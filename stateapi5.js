@@ -16,36 +16,6 @@ class StateApiFive extends Component
         }
     }
 
-    getContact=()=>
-    {
-        
-        let url="http://firstenquiry.com/api/react/crud/list.php";
-        axios.get(url).then(response=>{
-            if(response.data.length>0)
-            {
-                this.setState({
-                    contactlist:response.data
-                   })
-            }
-          
-        })
-    }
-
-    save=()=>{
-        let url="http://firstenquiry.com/api/react/crud/save.php";
-        let input=new FormData();
-        //formData create a json. append is javascript function 
-        input.append("name",this.state.fullname);
-        input.append("email",this.state.emailid);
-        input.append("mobile",this.state.mobile);
-        axios.post(url, input).then(response=>{
-            this.setState({
-                msg:response.data
-            })
-            this.getContact(); //to reload list after saving data
-        })
-    }
-
     componentDidMount(){
         this.getContact();
     }
@@ -71,7 +41,63 @@ class StateApiFive extends Component
         }) 
     }
 
-    
+    getContact=()=>
+    {
+        
+        let url="http://firstenquiry.com/api/react/crud/list.php";
+        axios.get(url).then(response=>{
+            if(response.data.length>0)
+            {
+                this.setState({
+                    contactlist:response.data
+                   })
+            }
+          
+        })
+    }
+
+    save=()=>{
+        this.setState({
+            msg: "Please wait Processing....",
+            contactlist:[]
+        })
+        let url="http://firstenquiry.com/api/react/crud/save.php";
+        let input=new FormData();
+        //formData create a json. append is javascript function 
+        input.append("name",this.state.fullname);
+        input.append("email",this.state.emailid);
+        input.append("mobile",this.state.mobile);
+        axios.post(url, input).then(response=>{
+            this.setState({
+                msg:response.data,
+                fullname:'',
+                emailid:'',
+                mobile:''
+            })
+            this.getContact(); //to reload list after saving data
+        })
+    }
+
+
+
+    deleteRecord=(recordid)=>{
+        this.setState({
+            msg: "Please wait Processing....",
+            contactlist:[]
+        })
+        let url="http://firstenquiry.com/api/react/crud/delete.php";
+        let input=new FormData();
+        //formData create a json. append is javascript function 
+        input.append("id", recordid);
+     
+        axios.post(url, input).then(response=>{
+            this.setState({
+                msg:response.data.status
+              
+            })
+            this.getContact(); //to reload list after saving data
+        })
+    }
 
     render()
     {
@@ -98,11 +124,12 @@ class StateApiFive extends Component
                         </div>
                     </div>
                     <div className="col-md-9">
-                        <h3>Available Records:- {this.state.contactlist.length}</h3>
+                        <h3 className="text-center">Available Records:- {this.state.contactlist.length}</h3>
+                       <p className="text-center text-danger">{this.state.msg}</p>
                         <table className="table table-bordered table-sm">
                             <thead> 
                                 <tr className="text-center text-primary">
-                                    <th>Record Id</th>
+                                    <th>Action</th>
                                     <th>Name</th>
                                     <th>Mobile</th>
                                     <th>E-mail</th>
@@ -110,13 +137,13 @@ class StateApiFive extends Component
                             </thead>
                             <tbody>
                                 {
-                                    this.state.contactlist.map((xitem,index)=>{
+                                    this.state.contactlist.map((row,index)=>{
                                         return(
                                             <tr key={index}>
-                                                <td>{xitem.id}</td>
-                                                <td>{xitem.name}</td>
-                                                <td>{xitem.email}</td>
-                                                <td>{xitem.mobile}</td>
+                                                <td className="text-center"><button className="btn btn-danger btn-sm" onClick={this.deleteRecord.bind(this, row.id)}>Delete</button></td>
+                                                <td>{row.name}</td>
+                                                <td>{row.email}</td>
+                                                <td>{row.mobile}</td>
                                             </tr>
                                         )
                                     })
