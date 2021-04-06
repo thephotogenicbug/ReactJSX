@@ -131,8 +131,9 @@ class StateApiFive extends Component
                                 <tr className="text-center text-primary">
                                     <th>Action</th>
                                     <th>Name</th>
-                                    <th>Mobile</th>
                                     <th>E-mail</th>
+                                    <th>Mobile</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>

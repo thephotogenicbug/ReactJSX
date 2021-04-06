@@ -32,7 +32,7 @@ class StateSix extends Component{
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <h2>Array Operation</h2>
-                        <p>Available Users- {this.state.userlist.length}</p>
+                        <p>Available Users-{this.state.userlist.length}</p>
                     </div>
                 </div>
                 <div className="row">

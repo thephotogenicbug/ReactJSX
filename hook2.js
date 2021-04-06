@@ -1,13 +1,18 @@
 import React, {useState} from 'react';
 const HookTwo =()=>{
  
-    const[city, updateCity]=useState([""]);
+    const[city, updateCity]=useState(["Bangalore", "Chennai"]);
     const[message, updateMessage]=useState();
     const[newcity, processCity]=useState();
     const save=()=>{
         updateCity(city =>[...city, newcity]);   
         updateMessage(newcity + " Added Successfully !");
         processCity("");
+    }
+    const deleteItem=(index)=>{
+        city.splice(index,1);
+      updateCity(city=>[...city]);
+        updateMessage(" Item Removed Successfully !");
     }
     return(
         <div className="container">
@@ -21,15 +26,15 @@ const HookTwo =()=>{
             <div className="row">
                 <div className="col-md-3"></div>
                 <div className="col-md-3 pt-2 ml-5">
-                <input 
-                type="text" 
+                <input
+                type="text"
                 className="form-control"
                 onChange={obj=>processCity(obj.target.value)}
                 value={newcity}
                 />
                 <small>{newcity}</small>
                 </div>
-                <div className="col-md-3 ">
+                <div className="col-md-3">
                     <button className="btn btn-primary" onClick={save}>Save City</button>
                 </div>
                 <div className="col-md-3"></div>
@@ -38,8 +43,12 @@ const HookTwo =()=>{
                 {
                     city.map((xcity, index)=>{
                         return(
-                            <div className="col-md-3 " key={index}>
-                                <p className="p-3 border">{xcity}</p>
+                            <div className="col-md-3"key={index}>
+                                <p className="p-3 border">
+                                    {xcity}
+                                    <hr/>
+                                    <button className="btn btn-danger btn-sm"onClick={deleteItem.bind(this, index)}>Delete</button>
+                                </p>
                             </div>
                         )
                     })

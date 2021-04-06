@@ -6,16 +6,16 @@ const Header = ()=>{
     return(
         <nav>
             <ul>
-                <li><Link to="/state1" className="pagelink">State1</Link></li>
-                <li><Link to="/state2" className="pagelink">State2</Link></li>
-                <li><Link to="/state3" className="pagelink">State3</Link></li>
-                <li><Link to="/state4" className="pagelink">State4</Link></li>
-                <li><Link to="/state5" className="pagelink">State5</Link></li>
-                <li><Link to="/state6" className="pagelink">State6</Link></li>
-                <li><Link to="/state7" className="pagelink">State7</Link></li>
-                <li><Link to="/stateapi1" className="pagelink">StateApiOne</Link></li>
-                <li><Link to="/stateapi2" className="pagelink">StateApiTwo</Link></li>
-                <li><Link to="/stateapi3" className="pagelink">StateApiThree</Link></li>
+              
+                <li><Link to="/stateapi1" className="pagelink">ApiOne</Link></li>
+                <li><Link to="/stateapi2" className="pagelink">ApiTwo</Link></li>
+                <li><Link to="/stateapi3" className="pagelink">ApiThree</Link></li>
+                <li><Link to="/stateapi4" className="pagelink">ApiFour</Link></li>
+                <li><Link to="/stateapi5" className="pagelink">ApiFive</Link></li>
+                <li><Link to="/hook1" className="pagelink">HookOne</Link></li>
+                <li><Link to="/hook2" className="pagelink">HookTwo</Link></li>
+                <li><Link to="/1/hook3" className="pagelink">HookThree</Link></li>
+                <li><Link to="/0/Bangalore/hook4" className="pagelink">HookFour</Link></li>
             </ul>
             
         </nav>

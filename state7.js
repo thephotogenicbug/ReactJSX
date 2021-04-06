@@ -41,11 +41,11 @@ class StateSeven extends Component{
                 </div>
                 <div className="row">
                     {
-                        this.state.itemlist.map((xuser, index)=>{
+                        this.state.itemlist.map((xitem, index)=>{
                             return(
                                 <div className="col-md-3 text-center">
                                     <div className="card p-2">
-                                        <p>{xuser}</p>
+                                        <p>{xitem}</p>
                                         <button className="btn btn-danger btn-sm"onClick={this.deleteUser.bind(this, index)}>Delete</button>
                                     </div>
                                 </div>

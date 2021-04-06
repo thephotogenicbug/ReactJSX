@@ -18,6 +18,13 @@ import StateSeven from './state7';
 import StateApiOne from './stateapi1';
 import StateApiTwo from './stateapi2';
 import StateApiThree from './stateapi3';
+import StateApiFour from './stateapi4';
+import StateApiFive from './stateapi5';
+import HookOne from './hook1';
+import HookTwo from './hook2';
+import HookThree from './hook3';
+import HookFour from './hook4';
+
 
 function App() {
   return(
@@ -40,6 +47,12 @@ function App() {
           <Route exact path="/stateapi1" component={StateApiOne}/>
           <Route exact path="/stateapi2" component={StateApiTwo}/>
           <Route exact path="/stateapi3" component={StateApiThree}/>
+          <Route exact path="/stateapi4" component={StateApiFour}/>
+          <Route exact path="/stateapi5" component={StateApiFive}/>
+          <Route exact path="/hook1" component={HookOne}/>
+          <Route exact path="/hook2" component={HookTwo}/>
+          <Route exact path="/:userid/hook3" component={HookThree}/>
+          <Route exact path="/:userid/:city/hook4" component={HookFour}/>
         </HashRouter>
   )
 }
