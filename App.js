@@ -24,6 +24,7 @@ import HookOne from './hook1';
 import HookTwo from './hook2';
 import HookThree from './hook3';
 import HookFour from './hook4';
+import HookFive from './hook5'
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route exact path="/hook2" component={HookTwo}/>
           <Route exact path="/:userid/hook3" component={HookThree}/>
           <Route exact path="/:userid/:city/hook4" component={HookFour}/>
+          <Route exact path="/:id/hook5" component={HookFive}/>
         </HashRouter>
   )
 }
