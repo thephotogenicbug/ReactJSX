@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import CustomerList from './customerlist';
 const HookOne = ()=>{
    // const[currentValue, updatedValue]=userState(initialValue);
    // const[array/VariableName, functionName]= userState(initialValue);
@@ -33,6 +34,14 @@ const HookOne = ()=>{
                    <h3>The Plus Was Clicked {a} Times</h3>
                    <h3>The Minus Was Clicked {b} Times</h3>
                </div>
+           </div>
+           <div className="row">
+               <CustomerList
+               fullname="Naveen" 
+               mobileno="9008006228" 
+               cityname="Bangalore" 
+               pic="1.jpg"/>
+               
            </div>
        </div>
    )

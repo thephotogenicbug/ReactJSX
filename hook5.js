@@ -47,7 +47,7 @@ const HookFive = ()=>{
                   </ul>
               </div>
               <div className="col-md-6">
-                  <div className="p-4 border">
+                <div className="p-4 border">
                 <h4 className="text-success">About {user[id].name}</h4>
                 <p>Mobile: {user[id].mobile}</p>
                 <p>Email : {user[id].email}</p>
