@@ -26,6 +26,7 @@ import HookThree from './hook3';
 import HookFour from './hook4';
 import HookFive from './hook5';
 import MyProps from './props';
+import Validation from './validation';
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
           <Route exact path="/:userid/:city/hook4" component={HookFour}/>
           <Route exact path="/:id/hook5" component={HookFive}/>
           <Route exact path="/props" component={MyProps}/>
+          <Route exact path="/validation" component={Validation}/>
         </HashRouter>
   )
 }
